@@ -47,6 +47,12 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.findByTaskDueDate(taskDate);
     }
 
+    @Override
+    public List<Task> getSortedTasksByDate(LocalDate taskDate) {
+        return taskRepository.findByTaskDueDateOrderByTaskPriority(taskDate);
+    }
+
+
 
 }
 

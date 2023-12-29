@@ -17,4 +17,6 @@ public interface TaskService {
     public List<Task> getAllTasks();
 
     List<Task> getTasksByDate(LocalDate taskDate);
+
+    List<Task> getSortedTasksByDate(LocalDate taskDate);
 }

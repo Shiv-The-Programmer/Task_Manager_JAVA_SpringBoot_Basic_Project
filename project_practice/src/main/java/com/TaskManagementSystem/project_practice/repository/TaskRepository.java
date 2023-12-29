@@ -10,4 +10,6 @@ import java.util.List;
 public interface TaskRepository extends JpaRepository<Task, String> {
 
     List<Task> findByTaskDueDate(LocalDate date);
+
+    List<Task> findByTaskDueDateOrderByTaskPriority(LocalDate taskDueDate);
 }
