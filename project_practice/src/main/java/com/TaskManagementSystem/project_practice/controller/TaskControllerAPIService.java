@@ -35,6 +35,12 @@ public class TaskControllerAPIService {
         return taskService.getTasksByDate(taskDate);
     }
 
+    @GetMapping("/date/sorted")
+    public List<Task> getSortedTasksByDate(@RequestParam("taskDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate taskDate) {
+        return taskService.getSortedTasksByDate(taskDate);
+    }
+
+
 
     @PostMapping
     public String createTaskForUser(@RequestBody Task task){
